@@ -1,0 +1,10 @@
+{{!< default}}
+
+<div id="latest-post" class="container">
+	THIS IS INDEX
+        {{#foreach posts}}
+{{! No indention to prevent handlebars indenting <pre> tag content}}
+{{> post-content}}
+        {{/foreach}}
+</div>
+

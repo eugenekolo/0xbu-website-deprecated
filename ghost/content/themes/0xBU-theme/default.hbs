@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{! Styles }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/skeleton.css"}}" />    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic" />
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+    <div id="wrapper">
+        <header class="site-header">
+            <div class="container">
+
+                {{! Top title bar}}
+                <div class="site-title-wrapper">
+                    {{#if @blog.logo}}
+                        <a class="site-logo" title="{{@blog.title}}" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+                    {{else}}
+                        <h1 class="site-title"><a class="" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
+                        <a class="button-square" href="{{@blog.url}}/rss"><i class="fa fa-rss"></i></a>
+                    {{/if}}
+                </div>
+
+                {{! Top nav bar}}
+                <ul class="site-nav">
+                    {{navigation}}
+                </ul>
+
+            </div>
+        </header>
+
+        {{! The meat }}
+        <div id="">
+            {{! This gets inserted into based on the 'context' of the current url.}}
+            {{{body}}}
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="site-title-wrapper">
+                <h1 class="site-title"><a class="" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
+
+                <a class="button-square button-jump-top js-jump-top" href="#"><i class="fa fa-angle-up"></i></a>
+            </div>
+
+            <p class="footer-copyright">&copy; {{date format="YYYY"}} / Published with <a href="https://ghost.org">Ghost</a> / <a href="https://github.com/0xBU/website">0xBU theme</a> By <a href="https://eugenekolo.com">Eugene Kolo</a></p>
+        </div>
+    </footer>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! Just in case we don't get jquery, make sure we really do get it }}
+    <script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+        document.write('<script type="text/javascript" src="{{asset "js/jquery-1.11.3.min.js"}}"></'+'script>');
+    }
+    </script>
+    <script type="text/javascript" src="{{asset "js/jquery.history.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/scripts.js"}}"></script>
+</body>
+</html>

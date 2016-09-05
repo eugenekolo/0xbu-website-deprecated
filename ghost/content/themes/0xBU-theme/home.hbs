@@ -1,0 +1,11 @@
+{{!< default}}
+
+<div id="latest-post" class="container">
+    {{#foreach posts}}
+        {{#if @last}}
+{{! No indention to prevent handlebars indenting <pre> tag content}}
+{{> post-content}}
+        {{/if}}
+    {{/foreach}}
+</div>
+
