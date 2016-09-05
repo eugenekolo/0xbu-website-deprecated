@@ -8,7 +8,7 @@ cd 0xbu-website
 ./0xbu-website-go.sh
 ```
 
-Note 1: You must have SSL certs, nginx config, and ghost config properly set up, and in place. They are not checked into this repo.
+Note 1: You must have SSL certs, nginx config, and ghost config properly set up, and in place. They are not checked into this repo.  
 Note 2: If you have privileges, you should instead clone: https://github.com/eugenekolo/0xBU-website/0xbu-website-private
 
 ## Changing
