@@ -1,4 +1,4 @@
-DEPRECATED. Website source is github.com/0xbu/0xbu.github.io now.
+DEPRECATED. Website source is [github.com/0xbu/0xbu.github.io](https://github.com/0xbu/0xbu.github.io) now.
 
 # 0xBU Ghost Blog Platform
 
