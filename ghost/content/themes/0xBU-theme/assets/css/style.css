@@ -647,3 +647,109 @@ table {
     display: none;
 }
 
+/*======================================================================================================
+Added by 0xBU
+=======================================================================================================*/
+
+/* Make stuff a little bigger */
+body {
+    font-size: 1.7em;
+}
+
+/* Make headers a little smaller */
+@media (min-width: 550px) {
+    h1 { font-size: 3.6rem; }
+    h2 { font-size: 3.0rem; }
+    h3 { font-size: 2.4rem; }
+    h4 { font-size: 1.8rem; }
+    h5 { font-size: 1.5rem; }
+    h6 { font-size: 1.1rem; }
+}
+
+
+/* Pack item lists tighter */
+ul, ol {
+    line-height: 1.5;
+}
+ul li, ol li {
+  margin: 0 0 5px; 
+}
+
+.nav-current:before {
+    content: "> ";
+}
+
+/* Add an underline under current nav item */
+@media (min-width: 650px) {
+  .nav-current {
+    border-bottom: solid 4px; 
+  }
+  .nav-current:before {
+    content: "";
+  }
+}
+
+
+/* Add a falling feather to toggle color scheme for big screens */
+#feather {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 80%;
+  bottom: 0;
+  margin: auto;
+  width: 150px;
+  animation: feather 5s ease-in-out 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  transform-origin: 0% 50%;
+}
+
+@media (max-width: 650px) {
+  #feather {
+    width: 0px; 
+    left: 0;
+  }
+}
+
+@keyframes feather {
+  0% {
+    transform: rotate(50deg) translate(0px, 50px);
+  }
+  25% {
+    transform: rotate(90deg) translate(50px, 100px);
+  }
+  50% {
+    transform: rotate(50deg) translate(100px, 50px);
+  }
+  75% {
+    transform: rotate(90deg) translate(150px, 100px);
+  }
+  100% {
+    transform: rotate(70deg) translate(200px, 75px);
+  }
+}
+
+rect.btn {
+  stroke: #FEFEFE;
+  fill: #FEFEFE;
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+
+
+.nightmode {
+  color: #FEFEFE;
+  background: #424242;
+}
+
+pre {
+  color: #424242;
+}
+
+.nightmode-feather {
+  fill: #FEFEFE;
+}
+
+
+

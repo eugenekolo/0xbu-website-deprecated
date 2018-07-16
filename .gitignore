@@ -3,12 +3,6 @@
 node_modules
 
 # Don't check in s3kr3t stuff
-conf/*
-!conf/.placeholder
 certs/*
-!certs/.placeholder
 *.db
 ghost/content/images/*
-!ghost/content/images/DO-NOT-TOUCH
-!ghost/content/images/README.md
-

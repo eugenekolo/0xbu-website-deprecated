@@ -16,8 +16,8 @@
 
     {{! Styles }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/skeleton.css"}}" />    
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic" />
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
@@ -79,5 +79,18 @@
     <script type="text/javascript" src="{{asset "js/jquery.history.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/scripts.js"}}"></script>
+
+<svg id="feather" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 792 792">
+  <path id="feather-path" d="M585.598 84.73c1.3-33.714-3.062-60.498-3.064-60.443 0-.003-1.88-7.296-1.31-22.718-17.606-2.105-35.733 23.334-35.708 23.178.007-.04-5.92-6.31-2.467-24.748-16.095 5.68-36.58 30.275-36.558 30.168-.01.036-16.107 24.552-22.262 50.876-38.96 62.31-99.634 174.945-99.383 173.153-.026.203-4.715 30.455.548 94.727-17.33-10.66-11.832-45.86-11.806-46.076-.118.89-28.485 75.862-32.756 96.37-4.99 26.655-71.744 142.843-71.284 138.468-.045.43 1.306 49.495 16.208 111.264-29.382-20.346-27.717-79.72-27.678-80.104-.07.722-17.615 50.27-9.633 57.083 7.965 7.012 18.69 60.09 27.28 70.44 1.093 4.432-26.683 80.61-57.79 84.568-31.266 5.153 8.934 11.545 15.006 11.033 3.038.033 20.617-15.56 37.905-36.732 17.21-20.284 34.133-46.138 34.136-46.05.082-.183 71.826 14.717 110.85-20.043 38.495-30.533 90.875-168.878 91.218-171.048-.025.153-39.915 11.316-56.83 13.25 16.798-6.362 66.718-49.27 66.845-50.043.072-.44 11.813-58.21 39.667-152.043 28.078-95.043 27.735-211.845 28.864-244.53zm-218.04 527.65c-20.194 33.926-55.775 57.98-62.243 61.61-.287.245-.54.447-.734.546-.642.333-.32.12.735-.545 6.34-4.646 35.03-49.587 47.524-69.606 6.52-9.048 45.618-112.005 87.89-245.582 41.507-128.31 86.18-287.24 86.255-286.692-6.36 50.28-43.172 195.353-78.273 311.512-35.588 119.506-69.454 210.085-81.155 228.757z" fill="#444"/>
+  <rect class="btn" x="0" y="0" width="512" height="512" onclick="
+	var nightmode = document.body.classList.toggle('nightmode');
+	document.getElementById('feather-path').classList.toggle('nightmode-feather');
+        var date = new Date();
+        date.setTime(date.getTime() + (30*24*60*60*1000));
+        expires = '; expires=' + date.toUTCString();
+	document.cookie = 'nightmode=' + nightmode.toString() + expires + '; path=/';
+  "/>
+</svg>
+
 </body>
 </html>

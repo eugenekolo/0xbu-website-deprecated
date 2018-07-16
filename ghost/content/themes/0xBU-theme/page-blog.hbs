@@ -1,9 +1,5 @@
 {{!< default}}
 <div id="blog" class="container">
-    <header class="xblog-post-header">
-        <h2 class="post-title">Blog</h2>
-    </header>
-
     {{#get "posts" include="tags,author"}}
          {{#foreach posts}}
          {{^if @last}}
